@@ -13,7 +13,7 @@ Un programador que no sabe aplicar o no entiende los patrones de diseño, entra 
 ## De qué trata este repositorio?
 #### Estado: En construcción ⚠️
 
-Tomaré las ejemplificaciones del libro y las llevaré a Typescript, dentro del framework Angular 20, [versión 20.2.x](https://v20.angular.dev/overview), usando [Signals](https://angular.dev/guide/signals) como sistema de estados.
+Haré un resumen del capítulo y tomaré algunas de las ejemplificaciones del libro y las llevaré a Typescript, dentro del framework Angular 20, [versión 20.2.x](https://v20.angular.dev/overview), usando [Signals](https://angular.dev/guide/signals) como sistema de estados. 
 
 > ## Idioma del proyecto
 > - Implementación (Typescript): English.
@@ -38,3 +38,4 @@ Tomaré las ejemplificaciones del libro y las llevaré a Typescript, dentro del 
  
 > Si crees que este libro es para ti, consigue tu [copia en Amazon](https://www.amazon.com/Head-First-Design-Patterns-Object-Oriented/dp/149207800X)
 
+![Visitas](https://visitor-badge.laobi.icu/badge?page_id=fabocv.Head-First-Design-Patterns-2nd-Edition-Angular-Signals)
