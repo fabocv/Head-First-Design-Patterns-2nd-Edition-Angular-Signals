@@ -1,0 +1,1 @@
+# Capítulo 2: Keeping your Objects in the Know: the Observer Patterns
