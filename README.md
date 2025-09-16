@@ -11,10 +11,7 @@
 Un programador que no sabe aplicar o no entiende los patrones de diseño, entra en una gran desventaja con sus pares más expertos. Este libro explica simple y didácticamente los principios de diseño orientado a objetos y su aplicación en patrones más usados en diversos problemas.
 
 ## De qué trata este repositorio?
-<div style="display: inline-flex; gap:0.5em">
-    <p style="padding:0.5em;">Estado:</p>
-    <p style="background-color: #111111; width: fit-content; padding:0.5em; color: lightgreen; border-radius:2em; font-weight:bold">En construcción</p>
-</div>
+#### Estado: En construcción ⚠️
 
 Tomaré las ejemplificaciones del libro y las llevaré a Typescript, dentro del framework Angular 20, [versión 20.2.x](https://v20.angular.dev/overview), usando [Signals](https://angular.dev/guide/signals) como sistema de estados.
 
