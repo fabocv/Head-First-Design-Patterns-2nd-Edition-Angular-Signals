@@ -10,18 +10,15 @@ Al diseñar una solución, lo más común es generalizar y enfrentarse a casos d
 
 > ## Principio de diseño:
 
-> Identificar aspectos en común del problema y separar aquellos que difieren, construyendolos como implementaciones del aspecto común.
+> Separar lo que cambia de lo que permanece estable, identificando los aspectos comunes del problema y encapsulando las variaciones como implementaciones específicas.
 
-Ejemplifican con un modelado de **Patos**. Hay patos que vuelan y otros que no, hay algunos que hacen quack otros no. La herencia se complica en estos casos.
+**Ejemplo (Patos)**: algunos vuelan y otros no; unos hacen quack y otros no. Usar solo herencia complica el modelo, porque los comportamientos varían.
 
-## Separar lo que cambia de lo que permanece igual
+**Solución**: definir un contrato con interfaces, que representan unidades de información y acción.
 
-Al modelar soluciones, definimos qué conjunto de datos y funciones genéricas tiene un aspecto, definiéndose como un **contrato de datos** que no debe romperse por otra entidad o instancia. Para ello empleamos **INTERFACES** como una unidad básica de información y acción que define un contrato y un comportamiento de un aspecto de solución.
+Una interface establece un comportamiento genérico (supertipo).
 
-### Programar una interface es programar un supertipo
-
-La interface define un comportamiento. Las clases que necesiten tener esta característica, deben implementarle, tipando su clase y obligando a definir las funciones que éste exija (polimorfismo).
-
+### Patos, patos y más patos!
 Podemos crear dos interfaces: FlyBehavior (que contiene fly() ), QuackBehavior (quack() ).
 
 Una clase como PatosVoladores que implemente FlyBehavior tendrá una función fly() distanta a otra clase como PatosNoVoladores (fly no hace nada.).
@@ -63,13 +60,13 @@ class Pato {
 
 Ahora creamos las clases de comportamientos para definir cada pato
 ```
-class Quack implements QuackBehavior {
+class Graznar implements QuackBehavior {
     quack() {
         console.log("Quack");
     }
 }
 
-class MuteQuack implements QuackBehavior {
+class SinGraznido implements QuackBehavior {
     quack() {
         console.log("-");
     }
@@ -89,7 +86,7 @@ class PatosVoladores implements FlyBehavior {
     }
 }
 
-class FlyNoWay implements FlyBehavior {
+class PatosNoVoladores implements FlyBehavior {
     fly() {
         console.log("No puedo volar :c");
     }
@@ -99,7 +96,7 @@ class FlyNoWay implements FlyBehavior {
 ```
 //Flying Steamer-Duck (Chile)
 class PatoQuetru extends Pato {
-    quackBehavior = new Quack();
+    quackBehavior = new Graznar();
     flyBehavior = new FlyWithWings();
 
     constructor() {
@@ -109,6 +106,15 @@ class PatoQuetru extends Pato {
     display() {
         console.log("Soy un pato Quetru del sur de Chile!);
     }
+
+    performQuack() {
+        quackBehavior.quack()
+    }
+
+    performFly() {
+        flyBehavior.fly()
+    }
+
 }
 ```
 
@@ -119,5 +125,8 @@ patito.performQuack();          // Output: Quack!
 patito.performFly();            // Output: Mírame volaar!!
 
 ```
+
+## Y esto es un tipo de patrón?
+obvio, pero se verá en detalle más adelante.
 
 ![Pato_quetru](https://www.redobservadores.cl/wp-content/uploads/2024/08/Quetru-volador-Benjamin-Gallardo.png)
