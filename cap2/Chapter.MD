@@ -1,6 +1,6 @@
-# Capítulo 2: Keeping your Objects in the Know: the Observer Patterns
+## Capítulo 2: Keeping your Objects in the Know: the Observer Patterns
 
-# Patrón Observer 
+# Patrón Observer | Comportamiento
 
 **Propósito:** define una relación uno a muchos entre objetos. Cuando un objeto (“sujeto”) cambia de estado, notifica automáticamente a sus “observadores”.
 

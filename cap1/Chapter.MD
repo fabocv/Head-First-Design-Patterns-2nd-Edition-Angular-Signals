@@ -9,7 +9,7 @@ Los autores inician el viaje de aprendizaje mencionando los principios de progra
 
 > Dado un problema donde no se quiere implementar interfaces inútiles en un modelo porque ciertas variaciones tienen características que otras no, se sugiere separar lo que cambia (comportamiento) de lo que permanece estable, identificando los aspectos comunes del problema y encapsulando las variaciones como implementaciones específicas. Esto define al **patrón Strategy.**
 
-# Patrón Strategy
+# Patrón Strategy | Comportamiento
 
 **Propósito**: encapsular comportamientos que cambian para permitir intercambiarlos, sin modificar las clases que los usan.
 
