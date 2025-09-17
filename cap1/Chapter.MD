@@ -11,131 +11,34 @@ Los autores inician el viaje de aprendizaje mencionando los principios de progra
 
 # Patrón Strategy
 
-**Propósito**: encapsular comportamientos que cambian y permitir intercambiarlos sin modificar las clases que los usan.
+**Propósito**: encapsular comportamientos que cambian para permitir intercambiarlos, sin modificar las clases que los usan.
 
-**Clave**: definir una interface para el comportamiento, y luego múltiples implementaciones que pueden sustituirse en tiempo de ejecución.
+**Clave**: definir una interface para el comportamiento, y luego múltiples implementaciones que pueden sustituirse en tiempo de ejecución. (*Ver modificación de patos con cohetes al final de esta sección.*)
 
-**Beneficio**:
+**Beneficios**:
 
-Evitas herencias profundas.
+- Evitar las herencias profundas.
 
-Aislas lo que varía de lo que permanece estable.
+- Aislar lo que varía de lo que permanece estable.
 
-Facilita la extensión: agregar un nuevo comportamiento no rompe el código existente.
+- Facilitar la extensión: agregar un nuevo comportamiento no rompe el código existente.
 
 **Ejemplo (Patos)**: algunos vuelan y otros no; unos hacen quack y otros no. Usar solo herencia complica el modelo, porque los comportamientos varían.
 
-**Solución**: definir un contrato con interfaces, que representan unidades de información y acción.
+> **Solución**: definir un contrato con interfaces, que representan unidades de información y acción.
 
-Una interface establece un comportamiento genérico (supertipo).
+Una interface es una unidad de información que establece un comportamiento genérico, además de ser un supertipo: variables que son definidas como interfaces.
 
 ### Patos, patos y más patos!
 Podemos crear dos interfaces: FlyBehavior (que contiene fly() ), QuackBehavior (quack() ).
 
-Una clase como PatosVoladores que implemente FlyBehavior tendrá una función fly() distanta a otra clase como PatosNoVoladores (fly no hace nada.).
+Una clase como VuelanConAlas que implemente FlyBehavior tendrá una función fly() distanta a otra clase como NoVuelan (fly no hace nada.).
 
-Similar a Volar, Graznar implementa QuackBehavior; clase SinGraznido, su metodo quack no hará nada.
+Similar a Volar, Graznar implementa QuackBehavior, haciendo algún tipo de quack(); luego la clase SinGraznido, su metodo quack no hará nada.
 
 La interfaz FlyBehavior puede ser reusada no solo en patos, sino en otros diversas clases que definan aves o animales.
 
 Considerando que las interfaces son supertipos, pueden definir los tipos de mis clases y variables.
-
-```
-interface FlyBehavior {
-    fly():void;
-}
-
-interface QuackBehavior {
-    quack():void;
-}
-```
-Delegamos los comportamientos del pato mediante funciones en la clase abstracta 'Pato':
-```
-class Pato {
-    flyBehavior: FlyBehavior,
-    quackBehavior: QuackBehavior
-
-    performQuack() {
-        quackBehavior.quack()
-    }
-
-    performFly() {
-        flyBehavior.fly()
-    }
-
-    //swim()
-    display();
-    
-}
-```
-
-Ahora creamos las clases de comportamientos para definir cada pato
-```
-class Graznar implements QuackBehavior {
-    quack() {
-        console.log("Quack");
-    }
-}
-
-class SinGraznido implements QuackBehavior {
-    quack() {
-        console.log("-");
-    }
-}
-
-class Squeak implements QuackBehavior {
-    quack() {
-        console.log("Squeak");
-    }
-}
-```
-
-```
-class PatosVoladores implements FlyBehavior {
-    fly() {
-        console.log("Mírame volaar!!");
-    }
-}
-
-class PatosNoVoladores implements FlyBehavior {
-    fly() {
-        console.log("No puedo volar :c");
-    }
-}
-```
-
-```
-//Flying Steamer-Duck (Chile)
-class PatoQuetru extends Pato {
-    quackBehavior = new Graznar();
-    flyBehavior = new FlyWithWings();
-
-    constructor() {
-        this.display();
-    }
-
-    display() {
-        console.log("Soy un pato Quetru del sur de Chile!);
-    }
-
-    performQuack() {
-        quackBehavior.quack()
-    }
-
-    performFly() {
-        flyBehavior.fly()
-    }
-
-}
-```
-
-Llamando al pato
-```
-Duck patito = new PatoQuetru(); // Output: Soy un pato Quetru del sur de Chile!
-patito.performQuack();          // Output: Quack!
-patito.performFly();            // Output: Mírame volaar!!
-
-```
 
 
 ## ⚠️ Contras del Strategy
@@ -146,7 +49,7 @@ patito.performFly();            // Output: Mírame volaar!!
 
 - Para proyectos pequeños, puede ser overengineering.
 
-###  Proliferación de clases
+ -  Proliferación de clases
 
 - Cada comportamiento nuevo = una clase nueva.
 
@@ -163,5 +66,7 @@ Si no se gestiona bien (ej. con DI en Angular o contenedores IoC), el código cl
 Al abstraer el comportamiento, a veces cuesta rastrear “qué implementación se está usando” en runtime.
 
 Esto puede volver debugging más lento.
+
+> Revisa el código en cap1.ts
 
 ![Pato_quetru](https://www.redobservadores.cl/wp-content/uploads/2024/08/Quetru-volador-Benjamin-Gallardo.png)
