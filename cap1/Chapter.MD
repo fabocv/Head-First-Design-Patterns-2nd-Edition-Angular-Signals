@@ -4,13 +4,24 @@
 
 Los autores inician el viaje de aprendizaje mencionando los principios de programación orientada a objetos. Señalan que la idea de este libro es reusar experiencias aprendidas de los patrones en vez de reusar código de manera mecánicamente.
 
-### Problemas al diseñar
 
-Al diseñar una solución, lo más común es generalizar y enfrentarse a casos de clases heredadas que no tienen ciertas funciones o atributos definidos en una clase padre. La herencia no siempre es la mejor solución cuando hay comportamientos que distinguen un elemento heredado de otro.
+> ## Primer Principio de diseño:
 
-> ## Principio de diseño:
+> Dado un problema donde no se quiere implementar interfaces inútiles en un modelo porque ciertas variaciones tienen características que otras no, se sugiere separar lo que cambia (comportamiento) de lo que permanece estable, identificando los aspectos comunes del problema y encapsulando las variaciones como implementaciones específicas. Esto define al **patrón Strategy.**
 
-> Separar lo que cambia de lo que permanece estable, identificando los aspectos comunes del problema y encapsulando las variaciones como implementaciones específicas.
+# Patrón Strategy
+
+**Propósito**: encapsular comportamientos que cambian y permitir intercambiarlos sin modificar las clases que los usan.
+
+**Clave**: definir una interface para el comportamiento, y luego múltiples implementaciones que pueden sustituirse en tiempo de ejecución.
+
+**Beneficio**:
+
+Evitas herencias profundas.
+
+Aislas lo que varía de lo que permanece estable.
+
+Facilita la extensión: agregar un nuevo comportamiento no rompe el código existente.
 
 **Ejemplo (Patos)**: algunos vuelan y otros no; unos hacen quack y otros no. Usar solo herencia complica el modelo, porque los comportamientos varían.
 
@@ -126,7 +137,31 @@ patito.performFly();            // Output: Mírame volaar!!
 
 ```
 
-## Y esto es un tipo de patrón?
-obvio, pero se verá en detalle más adelante.
+
+## ⚠️ Contras del Strategy
+
+- Mayor complejidad inicial
+
+- Pasas de tener una clase simple con métodos directos → a múltiples clases + interfaces.
+
+- Para proyectos pequeños, puede ser overengineering.
+
+###  Proliferación de clases
+
+- Cada comportamiento nuevo = una clase nueva.
+
+> Si no tienes un criterio claro, terminas con docenas de clases para comportamientos mínimos → difícil de mantener.
+
+### Gestión de dependencias
+
+Debes inyectar o pasar estrategias al objeto que las usa.
+
+Si no se gestiona bien (ej. con DI en Angular o contenedores IoC), el código cliente se llena de new.
+
+### Dificultad para seguimiento
+
+Al abstraer el comportamiento, a veces cuesta rastrear “qué implementación se está usando” en runtime.
+
+Esto puede volver debugging más lento.
 
 ![Pato_quetru](https://www.redobservadores.cl/wp-content/uploads/2024/08/Quetru-volador-Benjamin-Gallardo.png)
