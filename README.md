@@ -13,11 +13,7 @@ Un programador que no sabe aplicar o no entiende los patrones de diseño, entra 
 ## De qué trata este repositorio?
 #### Estado: En construcción ⚠️
 
-Haré un resumen del capítulo y tomaré algunas de las ejemplificaciones del libro y las llevaré a Typescript, dentro del framework Angular 20, [versión 20.2.x](https://v20.angular.dev/overview), usando [Signals](https://angular.dev/guide/signals) como sistema de estados. 
-
-> ## Idioma del proyecto
-> - Implementación (Typescript): English.
-> - Resúmenes: Español
+Haré un resumen del capítulo, sumando ejemplos empresariales aplicados a cada patrón para luego tomar algunas de las ejemplificaciones del libro y llevarlas a Typescript, dentro del framework Angular 20, [versión 20.2.x](https://v20.angular.dev/overview), usando [Signals](https://angular.dev/guide/signals) como sistema de estados. 
 
 ## Capítulos
 
