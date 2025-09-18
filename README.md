@@ -21,7 +21,7 @@ Haré un resumen del capítulo y tomaré algunas de las ejemplificaciones del li
 
 ## Capítulos
 
-- [Cap. 1](cap1) Welcome to Design Patterns: intro to Design Patterns
+- [Cap. 1](cap1) Welcome to Design Patterns: intro to Design Patterns (the Strategy Pattern)
 - [Cap. 2](cap2) Keeping your Objects in the Know: the Observer Patterns
 - [Cap. 3](cap3) Decorating Objects: the Decorator Pattern
 - [Cap. 4](cap4) Baking with OO Goodness: the Factory Pattern
