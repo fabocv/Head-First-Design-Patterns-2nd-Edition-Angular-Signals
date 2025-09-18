@@ -1,0 +1,26 @@
+{
+  "name": "head-first-design-patterns-2nd-edition-angular-signals",
+  "version": "1.0.0",
+  "description": "![portada](https://m.media-amazon.com/images/I/91quawUTiVL._SY342_.jpg)",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/fabocv/Head-First-Design-Patterns-2nd-Edition-Angular-Signals.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/fabocv/Head-First-Design-Patterns-2nd-Edition-Angular-Signals/issues"
+  },
+  "homepage": "https://github.com/fabocv/Head-First-Design-Patterns-2nd-Edition-Angular-Signals#readme",
+  "devDependencies": {
+    "@types/node": "^24.5.2",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.9.2"
+  }
+}

@@ -10,7 +10,7 @@ interface ShippingStrategy {
 
 class  DistanceShipping  implements ShippingStrategy {
     calculate(amount: number): number {
-        return amount * 1.2;
+        return amount * 0.2;
     }
 }
 
@@ -27,8 +27,11 @@ class ShippingContext {
     }
 }
 
+const compraBase = 100;
 const context = new ShippingContext(new DistanceShipping())
-context.getShippingCost(100); // Output: 120
+const shippingCost1 = context.getShippingCost(compraBase); 
+console.log(`Costo envío:$${shippingCost1}, Total a pagar: $${compraBase + shippingCost1}`); // Output: 120
 
 const freeContext = new ShippingContext(new FreeShipping())
-freeContext.getShippingCost(100); // Output: 0
+const shippingCost2 = freeContext.getShippingCost(compraBase); 
+console.log(`Costo envío:$${shippingCost2}, Total a pagar: $${compraBase + shippingCost2}`); // Output: 120
