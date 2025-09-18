@@ -26,7 +26,7 @@ El Singleton asegura que exista una única instancia de una clase en toda la apl
 
 ## Ejemplos empresariales 
 
-1) Gestor de configuración central (ConfigManager)
+### 1) Gestor de configuración central (ConfigManager)
 
 **Qué resuelve**: un único punto que carga y expone la configuración de la app (endpoints, flags, timeouts), evitando lecturas/valores inconsistentes repartidos.
 
