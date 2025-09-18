@@ -26,19 +26,19 @@ El Decorator permite agregar responsabilidades a un objeto dinámicamente sin mo
 
 ### Recomendaciones para aplicar el patrón
 
-Contrato claro primero: define la interfaz base antes de añadir decoradores.
+- Contrato claro primero: define la interfaz base antes de añadir decoradores.
 
-Documenta el orden: el orden de decoración suele importar; hazlo explícito.
+- Documenta el orden: el orden de decoración suele importar; hazlo explícito.
 
-Evita anidamientos innecesarios: no crees más capas de las que puedas soportar en debugging.
+- Evita anidamientos innecesarios: no crees más capas de las que puedas soportar en debugging.
 
-Instrumenta para debugging: logs/trace que indiquen la cadena de decoradores aplicada.
+- Instrumenta para debugging: logs/trace que indiquen la cadena de decoradores aplicada.
 
-Tests por combinación: unit tests para cada decorador aislado y tests de integración para las combinaciones más probables.
+- Tests por combinación: unit tests para cada decorador aislado y tests de integración para las combinaciones más probables.
 
-Feature flags y rollout: desplegar decoradores gradualmente ayuda a detectar efectos secundarios.
+- Feature flags y rollout: desplegar decoradores gradualmente ayuda a detectar efectos secundarios.
 
-Fallbacks seguros: si un decorador falla, define degradación (ej. skip logging, fallback a email si SMS falla).
+- Fallbacks seguros: si un decorador falla, define degradación (ej. skip logging, fallback a email si SMS falla).
 
 ## Ejemplos empresariales
 
