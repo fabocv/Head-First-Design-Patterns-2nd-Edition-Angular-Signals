@@ -2,7 +2,7 @@ class ConfigManager {
   private static instance: ConfigManager;
   private config: Record<string, any> = {};
 
-  private constructor() {} // 👈 evita instanciación directa
+  private constructor() {} 
 
   public static getInstance(): ConfigManager {
     if (!ConfigManager.instance) {
