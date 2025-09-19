@@ -39,19 +39,19 @@ Los casos que considere necesarios los llevo a  Angular 20, [versión 20.2.x](ht
 
 ## Capítulos
 
-- [Cap. 1](cap1) Welcome to Design Patterns: intro to Design Patterns (the Strategy Pattern)
-- [Cap. 2](cap2) Keeping your Objects in the Know: the Observer Patterns
-- [Cap. 3](cap3) Decorating Objects: the Decorator Pattern
-- [Cap. 4](cap4) Baking with OO Goodness: the Factory Pattern
-- [Cap. 5](cap5) One-of-a-Kind Objects: the Singleton Pattern
-- [Cap. 6](cap6) Encapsulating Invocation: the Command Pattern
-- [Cap. 7](cap7) Being Adaptive: the Adapter and Facade Patterns
-- [Cap. 8](cap8) Encapsulating Algorithms: the Template Method Pattern
-- [Cap. 9](cap9) Well-Managed Collections: the Iterator and Composite Patterns
-- [Cap. 10](cap10) The State of Things: the State Pattern
-- [Cap. 11](cap11) Controlling Object Access: the Proxy Pattern
-- [Cap. 12](cap12) Patterns of Patterns: compound patterns
-- [Cap. 13](cap13) Patterns in the Real World: better living with patterns
+- [Cap. 1](cap1/Chapter1.MD) Welcome to Design Patterns: intro to Design Patterns (the Strategy Pattern)
+- [Cap. 2](cap2/Chapter2.MD) Keeping your Objects in the Know: the Observer Patterns
+- [Cap. 3](cap3/Chapter3.MD) Decorating Objects: the Decorator Pattern
+- [Cap. 4](cap4/Chapter4.MD) Baking with OO Goodness: the Factory Pattern
+- [Cap. 5](cap5/Chapter5.MD) One-of-a-Kind Objects: the Singleton Pattern
+- [Cap. 6](cap6/Chapter6.MD) Encapsulating Invocation: the Command Pattern
+- [Cap. 7](cap7/Chapter7.MD) Being Adaptive: the Adapter and Facade Patterns
+- [Cap. 8](cap8/Chapter8.MD) Encapsulating Algorithms: the Template Method Pattern
+- [Cap. 9](cap9/Chapter9.MD) Well-Managed Collections: the Iterator and Composite Patterns
+- [Cap. 10](cap10/Chapter10.MD) The State of Things: the State Pattern
+- [Cap. 11](cap11/Chapter11.MD) Controlling Object Access: the Proxy Pattern
+- [Cap. 12](cap12/Chapter12.MD) Patterns of Patterns: compound patterns
+- [Cap. 13](cap13/Chapter13.MD) Patterns in the Real World: better living with patterns
 
  
 > Si crees que este libro es para ti, consigue tu [copia en Amazon](https://www.amazon.com/Head-First-Design-Patterns-Object-Oriented/dp/149207800X)
