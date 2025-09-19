@@ -1,7 +1,7 @@
 
 # Head First Design Patterns: Building Extensible and Maintainable Object-Oriented Software 2nd Edition 
 
-
+[![OpenSSF Scorecard](https://api.scorecard.dev/projects/github.com/fabocv/Head-First-Design-Patterns-2nd-Edition-Angular-Signals/badge)](https://scorecard.dev/viewer/?uri=github.com/fabocv/Head-First-Design-Patterns-2nd-Edition-Angular-Signals)
 ###  Eric Freeman (Book Autor), Elisabeth Robson (Book Autor)
 
 ![portada](https://m.media-amazon.com/images/I/91quawUTiVL._SY342_.jpg)
