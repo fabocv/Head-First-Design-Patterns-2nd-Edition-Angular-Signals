@@ -1,4 +1,4 @@
-# Capítulo 7: Being Adaptive: the Adapter and Facade Patterns
+
 
 # Patrón Facade | Estructural
 
