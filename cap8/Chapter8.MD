@@ -26,7 +26,7 @@ El patrón Template Method define la estructura general (esqueleto) de un algori
 ### 1. Procesamiento de pagos multicanal
 
 **Qué resuelve:** distintos proveedores (Stripe, PayPal, MercadoPago) siguen un flujo común: validar → autorizar → ejecutar → confirmar.
-#### Implementación-pasos:
+#### Implementación:
 
 - Clase abstracta PaymentProcessor define el processPayment() con pasos estándar.
 
@@ -41,7 +41,7 @@ El patrón Template Method define la estructura general (esqueleto) de un algori
 ### 2. Generación de reportes corporativos
 
 **Qué resuelve:** reportes tienen estructura común (extraer datos → procesar → renderizar), pero difiere el formato de salida (PDF, Excel, HTML).
-#### Implementación-pasos:
+#### Implementación:
 
 - Clase base ReportGenerator con método generate().
 - Subclases implementan render().
@@ -55,7 +55,7 @@ El patrón Template Method define la estructura general (esqueleto) de un algori
 ### 3. Workflows de Recursos Humanos
 
 **Qué resuelve:** procesos de contratación, onboarding y offboarding tienen pasos comunes: registrar, verificar, aprobar, notificar.
-#### Implementación-pasos:
+#### Implementación:
 
 - Clase EmployeeWorkflow define plantilla con executeWorkflow().
 - Subclases (Onboarding, Offboarding) personalizan notificaciones y verificaciones.
@@ -71,7 +71,7 @@ El patrón Template Method define la estructura general (esqueleto) de un algori
 
 **Qué resuelve:** todos los pipelines siguen pasos ETL (Extract → Transform → Load), pero difiere cómo se implementa cada paso.
 
-#### Implementación-pasos:
+#### Implementación:
 
 - Clase abstracta ETLProcess con runPipeline().
 - Subclases implementan extract() (API, DB), transform() (reglas de negocio), load() (destino: warehouse, lake).
@@ -85,7 +85,7 @@ El patrón Template Method define la estructura general (esqueleto) de un algori
 ### 5. Frontends (Angular/UX) – Flujo de formularios dinámicos
 
 **Qué resuelve:** formularios comparten estructura (renderizar campos → validar → enviar → feedback), pero difiere la validación o envío.
-#### Implementación-pasos:
+#### Implementación:
 
 - Clase base FormHandler con método processForm().
 - Subclases (LoginForm, SurveyForm, PaymentForm) implementan validaciones/envíos específicos.
